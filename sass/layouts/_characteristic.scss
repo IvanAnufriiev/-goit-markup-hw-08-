@@ -1,32 +1,45 @@
 .characteristic__visually-hidden {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    margin: -1px;
+    // position: absolute;
+    // width: 1px;
+    // height: 1px;
+    // margin: -1px;
     border: 0;
     padding: 0;
     white-space: nowrap;
     clip-path: inset(100%);
     clip: rect(0 0 0 0);
     overflow: hidden;
-}
+    }
 
 .characteristic__list {
-    padding-left: 0px;
     display: flex;
     gap: 30px;
-    list-style: none;
-    flex-basis: calc((100% - 90px) / 4);
+    flex-wrap: wrap;
+    padding-left: 0px;
+    // list-style: none;
+    // padding-left: 0px;
+    // flex-basis: calc((100% - 90px) / 4);
+   
 }
 
 .characteristic__item {
-    width: 270px;
+    width: 100%;
+    @include tablet {
+    width: calc((100% - 30px) / 2);
+        }
+    @include desktop {
+    width: calc((100% - 90px) / 4);
+                }
+   
 }
 
 .characteristic__card {
-    width: 270px;
-    height: 120px;
     display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    // height: 120px;
+   
     align-items: center;
     justify-content: center;
     margin-bottom: 30px;
@@ -34,29 +47,38 @@
 }
 
 .characteristics__card-titel {
+    margin-top: 30px;
+    margin-bottom: 10px;
+    text-align: center;
     margin-bottom: 10px;
     font-weight: 700;
     font-size: 14px;
     line-height: 1.1428;
     text-transform: uppercase;
     color: var(--first-title-color);
+    letter-spacing: 0.03em;
+    
 }
-
 .characteristics__card-text {
+    margin-bottom: 30px;
     font-size: 14px;
     line-height: 1.7142;
+    font-weight: 400;
+    letter-spacing: 0.03em;
+    
+        color: #757575;
 }
 
 .characteristic {
-    display: flex;
-    padding-top: 94px;
-    padding-bottom: 94px;
+    // display: flex;
+    // padding-top: 94px;
+    // padding-bottom: 94px;
     flex-wrap: wrap;
     gap: 10px;
     background-color: var(--first-color);
 }
 
 .characteristic__container {
-    display: flex;
+    // display: flex;
     gap: 30px;
 }

@@ -1,11 +1,11 @@
 @import "./utils/variables";
 @import "./base/reset";
-@import "./utils/mixin";
 @import "./utils/hide";
+@import "./utils/mixin";
 @import "./base/common";
 @import "./components/conteiner";
 @import "./components/header";
-@import "./layouts/hero";
+
 @import "./layouts/characteristic";
 @import "./components/logo";
 @import "./layouts/work-list";
@@ -15,4 +15,4 @@
 @import "./layouts/portfolio/portfolio-nav";
 @import "./layouts/portfolio/portfolio-list";
 @import "./components/modal";
-
+@import "./layouts/hero";
