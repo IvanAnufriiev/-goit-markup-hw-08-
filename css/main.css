@@ -86,15 +86,25 @@ body {
   }
 }
 
-.header {
-  width: 480px;
-  height: 60px;
-}
-
 .header__container {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding-left: 15px;
+}
+@media screen and (min-width: 480px) {
+  .header__container {
+    height: 60px;
+    display: flex;
+    align-items: center;
+  }
+}
+@media screen and (min-width: 768px) {
+  .header__container {
+    height: 80px;
+    display: flex;
+    align-items: center;
+  }
 }
 
 .header__nav {
@@ -102,11 +112,21 @@ body {
 }
 
 .header__list {
-  margin-left: 93px;
-  padding-left: 0px;
-  gap: 50px;
-  align-items: center;
   display: none;
+}
+@media screen and (min-width: 768px) {
+  .header__list {
+    display: flex;
+    margin-left: 93px;
+    padding-left: 0px;
+    gap: 50px;
+    align-items: center;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .header__list {
+    margin-left: 92px;
+  }
 }
 
 .header__list .header__nav-line::after {
@@ -133,17 +153,11 @@ body {
   color: var(--logo-item-color);
   transition: color var(--transition-cubic);
 }
-@media screen and (min-width: 480px) {
-  .header__link {
-    display: none;
-  }
-}
 
 .header__item {
   position: relative;
-  padding-top: 32px;
-  padding-bottom: 32px;
   align-items: center;
+  gap: 10px;
 }
 
 .header__contact {
@@ -152,6 +166,11 @@ body {
   align-items: center;
   gap: 50px;
   display: none;
+}
+@media screen and (min-width: 768px) {
+  .header__contact {
+    display: block;
+  }
 }
 
 .header__contact-link {
@@ -169,6 +188,21 @@ body {
   color: var(--logo-item-color);
   transition: color var(--transition-cubic);
 }
+@media screen and (min-width: 768px) {
+  .header__contact-link {
+    font-size: 12px;
+    line-height: 1.16;
+  }
+}
+
+.header__contact-email {
+  margin-bottom: 10px;
+  padding-top: 21px;
+}
+
+.header__contact-telefon {
+  padding-bottom: 21px;
+}
 
 .header__contact-image {
   fill: #757575;
@@ -178,11 +212,17 @@ body {
 }
 
 .meny-open {
-  padding-left: auto;
+  padding-top: 10px;
+  padding-bottom: 10px;
   width: 40px;
   height: 40px;
   border: none;
   background-color: #fff;
+}
+@media screen and (min-width: 768px) {
+  .meny-open {
+    display: none;
+  }
 }
 
 .characteristic__visually-hidden {
