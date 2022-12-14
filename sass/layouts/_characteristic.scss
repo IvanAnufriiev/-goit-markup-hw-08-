@@ -1,8 +1,8 @@
 .characteristic__visually-hidden {
-    // position: absolute;
-    // width: 1px;
-    // height: 1px;
-    // margin: -1px;
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
     border: 0;
     padding: 0;
     white-space: nowrap;
@@ -38,6 +38,7 @@
     margin-left: auto;
     margin-right: auto;
     width: 100%;
+    height: 120px;
     // height: 120px;
    
     align-items: center;
@@ -67,6 +68,9 @@
     letter-spacing: 0.03em;
     
         color: #757575;
+        @include desktop{
+            margin-bottom: 0px;
+        }
 }
 
 .characteristic {

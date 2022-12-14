@@ -1,24 +1,19 @@
 .work__titel {
 @extend %title-two;
 margin-bottom: 50px;
+padding-top: 94px;
 }
 .work__list {
-    // display: flex;
+    display: flex;
     padding-left: 0;
     gap: 30px;
 }
 
 .work__item {
-    // position: relative;
+    position: relative;
     width: 100%;
     
-        @include tablet {
-            width: calc((100% - 30px) / 2);
-        }
-    
-        @include desktop {
-            width: calc((100% - 90px) / 3);
-        }
+       
 }
 
 .work__name {
@@ -47,4 +42,7 @@ margin-bottom: 50px;
     gap: 10px;
     background-color: var(--first-color);
     display: none;
+    @include desktop{
+        display: flex;
+    }
 }
