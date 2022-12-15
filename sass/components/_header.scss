@@ -58,6 +58,7 @@
     background-color: var(--logo-item-color);
     border-radius: 2px;
 }
+ 
 
 
 .header__link {
@@ -91,9 +92,11 @@
     align-items: center;
     gap: 50px;
     display: none;
+    
 
     @include tablet {
         display: block;
+        padding-right: 15px;
     }
     @include desktop {
         display: flex;

@@ -19,8 +19,6 @@
     margin-right: auto;
     padding: 40px;
     @include mobile {
-            padding-left: 15px;
-            padding-right: 15px;
             max-width: 450px;
             width: 100%;
             min-height: 609px;
@@ -34,8 +32,11 @@
             right: 159px;
         }
         @include desktop{
+            margin-left: 0;
+            margin-right: 0;
             top: 50%;
             left: 50%;
+            right: 0;
             transform: translate(-50%, -50%) scaleY(1);
             transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
             max-width: 528px;
@@ -84,11 +85,13 @@
 .modal-title {
     font-weight: 700;
     font-size: 20px;
-    line-height: 23px;
+    line-height: 1.5;
     text-align: center;
     letter-spacing: 0.03em;
     color: #212121;
     margin-bottom: 12px;
+    font-weight: 700;
+        
 }
 
 .modal-input {
@@ -106,7 +109,7 @@
 }
 
 .modal-input-list {
-    display: flex;
+    // display: flex;
     justify-content: center;
 }
 
@@ -139,7 +142,7 @@
     display: block;
     min-width: 100%;
     min-height: 120px;
-    margin-bottom: 20px;
+    // margin-bottom: 20px;
     outline: transparent;
     padding-left: 16px;
     padding-top: 12px;
@@ -168,10 +171,14 @@
     display: flex;
     align-items: center;
     font-weight: 400;
-    font-size: 14px;
-    line-height: 171%;
+    font-size: 12px;
+    line-height: 1.16;
     letter-spacing: 0.03em;
     color: #757575;
+    @include desktop{
+    font-size: 14px;
+    line-height: 1.71;
+    }
 }
 
 .check-text span {
@@ -216,7 +223,7 @@
     height: 50px;
     font-weight: 700;
     font-size: 16px;
-    line-height: 188%;
+    line-height: 1.88;
     letter-spacing: 0.06em;
     color: #FFFFFF;
     background: #2196F3;
