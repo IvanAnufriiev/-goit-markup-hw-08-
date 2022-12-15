@@ -1,26 +1,41 @@
 .backdrop {
-    // position: fixed;
+    position: fixed;
     top: 0;
     width: 100%;
     height: 100%;
     background: rgba(0, 0, 0, 0.2);
     transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    
 }
 
 .backdrop.is-hidden .modal {
     transform: translate(-50%, -50%) scaleY(0);}
 .modal {
-    // position: absolute;
-    width: 528px;
-    min-height: 581px;
+    position: absolute;
     background: #FFFFFF;
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) scaleY(1);
-    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
     padding: 40px;
+    @include mobile {
+            padding-left: 15px;
+            padding-right: 15px;
+            max-width: 450px;
+            width: 100%;
+            min-height: 609px;
+            top: 95px;
+            left: 15px;
+            right: 15px;
+        }
+        @include desktop{
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) scaleY(1);
+            transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+            padding: 40px;
+            
+            max-width: 528px;
+            min-height: 581px;
+        }
 }
 
 .knopka {
@@ -36,7 +51,7 @@
 }
 
 .modal-close {
-    // position: absolute;
+    position: absolute;
     width: 30px;
     height: 30px;
     top: 8px;
@@ -57,7 +72,7 @@
 }
 
 .modal-list {
-    // display: block;
+    display: block;
     max-width: 100%;
 }
 
@@ -86,12 +101,12 @@
 }
 
 .modal-input-list {
-    // display: flex;
+    display: flex;
     justify-content: center;
 }
 
 .input-wrap {
-    // position: relative;
+    position: relative;
     margin-bottom: 10px;
     margin-top: 4px;
 }
@@ -105,7 +120,7 @@
 }
 
 .input-icon {
-    // position: absolute;
+    position: absolute;
     left: 12px;
     top: 50%;
     transform: translateY(-50%);
@@ -116,7 +131,7 @@
 }
 
 .modal-coments {
-    // display: block;
+    display: block;
     min-width: 100%;
     min-height: 120px;
     margin-bottom: 20px;
@@ -145,7 +160,7 @@
 }
 
 .check-text {
-    // display: flex;
+    display: flex;
     align-items: center;
     font-weight: 400;
     font-size: 14px;
@@ -182,13 +197,13 @@
 }
 
 .modal-button-list {
-    // display: flex;
+    display: flex;
     justify-content: center;
     margin-top: 30px;
 }
 
 .modal-button {
-    // position: absolute;
+    position: absolute;
     display: block;
     align-items: center;
     text-align: center;
