@@ -80,8 +80,8 @@
     position: relative;
     // display: flex;
     align-items: center;
-    gap: 10px
-    ;
+    gap: 10px;
+    
 }
 
 .header__contact {
@@ -91,9 +91,17 @@
     align-items: center;
     gap: 50px;
     display: none;
-    @include tablet{
+
+    @include tablet {
         display: block;
     }
+    @include desktop {
+        display: flex;
+        align-items: center;
+
+    }
+
+    
    
 }
 
@@ -117,13 +125,23 @@
         font-size: 12px;
         line-height: 1.16;
         }
+       
+
 }
 .header__contact-email{
     margin-bottom: 10px;
     padding-top: 21px;
+    @include desktop {
+            padding-top: 0;
+            margin: 0;
+        }
 }
 .header__contact-telefon{
     padding-bottom: 21px;
+    @include desktop {
+            padding-bottom: 0;;
+            margin: 0;
+        }
 }
 
 .header__contact-image {

@@ -1,23 +1,64 @@
 .footer {
+    display: block;
+    align-items: center;
+    width: 100%;
+    height: 604px;
     padding-top: 60px;
     padding-bottom: 60px;
     background-color: var(--footer-bcg);
     box-sizing: border-box;
-    display: none;
+     align-content: center;
+@include mobile {
+        
+        height: 603px;
+    }
+@include tablet{
+    height: 464px;
+}
+@include desktop{
+    height: 251px;
+    display: flex;
+}
 }
 
+
+
+
+    
+
+
 .footer-blok {
-    display: flex;
+    position: relative;
+    // display: block;
+    align-items: center;
+    @include tablet{
+        position: relative;
+    }
+    @include desktop{
+        display: flex;
+    }
 }
 
 .address {
     display: block;
+    text-align: center;
+    align-items: center;
     margin-top: 20px;
     font-family: 'Roboto';
     font-style: normal;
     font-size: 14px;
     line-height: 1.7142;
     color: var(--first-color);
+    @include tablet{
+        position: absolute;
+        left: 76px;
+    }
+    @include desktop{
+        position: relative;
+        margin-top: 28px;
+        text-align: left;
+        left: 0;
+    }
 }
 
 .footer-contact {
@@ -26,13 +67,32 @@
     font-size: 14px;
     line-height: 1.7142;
     color: rgba(255, 255, 255, 0.6);
-    text-decoration: none
+    text-decoration: none;
+    @include desktop{
+        margin-top: 12px;
+    }
+    
 }
 
 .online {
-    max-width: 206px;
-    margin-left: 70px;
-    padding-top: 12px;
+    // max-width: 206px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 60px;
+    margin-bottom: 20px;
+    @include tablet{
+        padding-top: 0;
+position: absolute;
+top: 0px;
+right: 89px;
+    }
+    @include desktop{
+        position: relative;
+        margin-left: 94px;
+        margin-right: 94px;
+        right: 0;
+        margin-bottom: 0;
+    }
 }
 
 .online-titel {
@@ -44,12 +104,18 @@
     letter-spacing: 0.03em;
     text-transform: uppercase;
     color: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    @include tablet{
+        margin-top: 0px;
+    }
 }
 
 .online-list {
     display: flex;
+    margin-left: auto;
+    margin-right: auto;
     width: 206px;
-    height: 44px;
     padding-left: 0px;
     margin-top: 20px;
     gap: 10px;
@@ -85,25 +151,41 @@
 
 /* |--------------ФУТЕР ИНПУТ---------------------- */
 .footer-telegram {
-    position: absolute;
-    margin-left: 93px;
+    // position: absolute;
+    // margin-left: 93px;
     justify-content: center;
-    padding-top: 12px;
+    margin-top: 60px;
+    @include tablet{
+        margin-top: 0;
+    position: absolute;
+    top: 180px;
+    left: 159px;
+    }
+    @include desktop{
+        position: relative;
+        top: 0;
+        left: 0;
+        margin-top: 0;
+    }
+    
+
 }
 
 .footer-input {
+    margin-left: 15px;
+    margin-right: 15px;
     border: 1px solid rgba(255, 255, 255, 0.3);
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
     border-radius: 4px;
     height: 50px;
-    width: 358px;
+    width: 450px;
     background-color: transparent;
-    padding: 0px 0px 0px 16px;
     align-items: center;
     letter-spacing: 0.03em;
     transform: border-color var(--transition-cubic);
     color: rgba(255, 255, 255, 0.6);
     &::placeholder {
+        padding-left: 16px;
     font-weight: 400;
     font-size: 16px;
     line-height: 1.25;
@@ -120,10 +202,15 @@
     border-color: var(--logo-item-color);
     transition: var(--transition-cubic);
             }
+            @include desktop{
+                width: 358px;
+                margin-left: 0;
+            }
 }
 
 .input-title {
     display: block;
+    text-align: center;
     font-weight: 700;
     font-size: 14px;
     line-height: 1.14;
@@ -131,33 +218,51 @@
     text-transform: uppercase;
     margin-bottom: 20px;
     color: #FFFFFF;
+    @include desktop{
+        text-align: left;
+    }
 }
 
 .footer-input-list {
-    display: flex;
+    // padding-left: 140px;
+    // padding-right: 140px;
+    display: block;
     align-items: center;
+    align-content: center;
+ 
     height: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    @include desktop{
+        display: flex;
+    }
 }
 
 .imput-button {
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
     height: 50px;
     width: 200px;
     background: var(--logo-item-color);
     color: var(--first-color);
     border-radius: 4px;
-    margin-left: 12px;
+    // margin-left: 12px;
     padding: 0px;
     border: none;
     &:focus,
     &:hover {
     background-color: #188CE8;
         }
+        @include desktop{
+            margin-top: 0;
+        }
 }
 
 .imput-knopka {
     fill: var(--first-color);
-    margin-left: 5%;
+   padding-left: 5px;
 }
