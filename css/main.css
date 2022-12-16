@@ -65,6 +65,10 @@ body {
   background: var(--first-color);
 }
 
+.is-hidden {
+  overflow: hidden;
+}
+
 .container {
   width: 100%;
   margin-left: auto;
@@ -230,18 +234,135 @@ body {
   fill: var(--logo-item-color);
 }
 
-.meny-open {
+.menu-open {
+  display: inline-flex;
+  margin: 0;
+  background-color: transparent;
   padding-top: 10px;
   padding-bottom: 10px;
   width: 40px;
   height: 40px;
   border: none;
-  background-color: #fff;
 }
 @media screen and (min-width: 768px) {
-  .meny-open {
+  .menu-open {
     display: none;
   }
+}
+
+.icon-cross {
+  left: 22.22%;
+  right: 16.67%;
+  top: 16.67%;
+  bottom: 22.22%;
+  fill: #000000;
+}
+.icon-cross:focus, .icon-cross:hover {
+  fill: var(--logo-item-color);
+}
+
+.mob-menu {
+  position: fixed;
+  top: 0;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 480px;
+  width: 100%;
+  height: 796px;
+  background: #FFFFFF;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08), 0px 1px 3px rgba(0, 0, 0, 0.16);
+}
+@media screen and (min-width: 768px) {
+  .mob-menu {
+    display: none;
+  }
+}
+
+.menu-close {
+  display: block;
+  width: 40px;
+  height: 40px;
+  border: none;
+  background-color: transparent;
+  margin-left: auto;
+  padding-top: 21px;
+  padding-right: 25px;
+}
+
+.mob-list {
+  margin-bottom: 306px;
+}
+
+.mob__item {
+  margin-bottom: 30px;
+}
+
+.mob__link {
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 1.17;
+  letter-spacing: 0.02em;
+  color: var(--first-title-color);
+  text-decoration: none;
+  padding-top: 48px;
+}
+
+.mob-contact {
+  position: absolute;
+  bottom: 134px;
+}
+
+.mob-contact-telefon {
+  margin-bottom: 32px;
+}
+
+.mob-telefon-name {
+  font-weight: 500;
+  font-size: 34px;
+  line-height: 1.17;
+  letter-spacing: 0.02em;
+  color: #2196F3;
+  text-decoration: none;
+}
+
+.mob-email-name {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 1.16;
+  letter-spacing: 0.02em;
+  color: #757575;
+  text-decoration: none;
+}
+
+.mob-contact-link {
+  text-decoration: none;
+}
+
+.mob-soc {
+  display: flex;
+  position: absolute;
+  bottom: 48px;
+}
+
+.mob-soc_item:not(:last-child)::after {
+  content: "";
+  margin-left: 10px;
+  margin-right: 10px;
+  top: 40%;
+  left: 100%;
+  width: 22px;
+  height: 2px;
+  rotate: -90deg;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+}
+
+.mob-soc-name {
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1, 22;
+  letter-spacing: 0.02em;
+  color: #2196F3;
 }
 
 .hero {
@@ -1116,8 +1237,8 @@ li > .client__link:hover, li > .client__link:focus {
 }
 @media screen and (min-width: 1200px) {
   .modal {
-    margin-left: 0;
-    margin-right: 0;
+    margin-left: 0px;
+    margin-right: 0px;
     top: 50%;
     left: 50%;
     right: 0;
