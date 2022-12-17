@@ -15,22 +15,25 @@
 }
 
 .logo-footer {
-   padding-left: 163px;
-   padding-right: 163px;
-   padding-top: 60px;
+    display: flex;
+    justify-content: center;
+//   margin: 0;
+//    padding-top: 60px;
     font-family: 'Raleway';
     font-weight: 700;
     font-size: 26px;
     line-height: 1.1923;
     color: var(--first-color);
     text-decoration: none;
-    width: 145px;
+    // width: 145px;
     height: 31px;
     @include tablet{
-        padding-left: 115px;
-        padding-top: 60px;
+       
+        margin-bottom: 20px;
+        
     }
     @include desktop{
+        display: block;
         text-align: left;
      padding: 0;
     }

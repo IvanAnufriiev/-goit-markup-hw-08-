@@ -1,6 +1,6 @@
 .hero {
     display: block;
-    max-width: 1600px;
+    max-width: 1200px;
     height: 600px;
     align-items: center;
     justify-content: center;
@@ -9,23 +9,30 @@
     margin-top: 60px;
     box-sizing: border-box;
     margin: 0 auto;
-    margin-bottom: 60px;
     // padding-top: 200px;
     // padding-bottom: 200px;
-    background-image: linear-gradient(rgba(47, 48, 58, 0.4),
-    rgba(47, 48, 58, 0.4)),
-    url(../../images/image-bg.jpg);
-    background-repeat: no-repeat;
-    height: 400px;
-    @media (min-device-pixel-ratio: 2),
-        (min-resolution: 192dpi),
-        (min-resolution: 2dppx) {
-    background-image: linear-gradient(rgba(47, 48, 58, 0.4),
-    rgba(47, 48, 58, 0.4)),
-    url(../images/Header-mob-2x.jpg);
+    @include mobile {
+        padding-top: 118px;
+        padding-bottom: 118px;
+            background-image: linear-gradient(rgba(47, 48, 58, 0.4),
+                    rgba(47, 48, 58, 0.4)),
+                url(../images/Header-mob-1x.jpg);
+            background-repeat: no-repeat;
+            height: 400px;
+    
+            @media (min-device-pixel-ratio: 2),
+            (min-resolution: 192dpi),
+            (min-resolution: 2dppx) {
+                background-image: linear-gradient(rgba(47, 48, 58, 0.4),
+                        rgba(47, 48, 58, 0.4)),
+                    url(../images/Header-mob-2x.jpg);
+                background-size: cover;
+            }
         }
    
-    @include mobile{
+   
+    @include tablet{
+        
         height: 400px;
         background-image: linear-gradient(rgba(47, 48, 58, 0.4),
         rgba(47, 48, 58, 0.4)),
@@ -38,7 +45,7 @@
         url(../images/Header-tablet-2x.jpg) }
         } 
 
-    @include tablet {
+    @include desktop {
         height: 600px;
         padding-top: 200px;
         padding-bottom: 200px;
@@ -54,12 +61,11 @@
                 url(../images/Header-desktop-2x.jpg)
                     }
         }
-
+        
 }
 
 
 .hero__title {
-    padding-top: 118px;
     margin: 0 auto;
     margin-bottom: 30px;
     font-weight: 900;
@@ -71,12 +77,12 @@
     color: var(--first-color);
 
     @include tablet {
-            padding: 0;
-            font-size: 44px;
-            line-height: 1.36;
+        font-size: 26px;
+        line-height: 1.62;
+        padding: 0;
+            
         }
-@include desktop {
-   
+    @include desktop{
         font-size: 44px;
         line-height: 1.36;
     }

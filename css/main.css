@@ -11,7 +11,7 @@
   --transition-cubic: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.client__titel, .team__title, .work__titel {
+.work__titel {
   font-weight: 700;
   font-size: 36px;
   line-height: 1.1666;
@@ -73,6 +73,8 @@ body {
   width: 100%;
   margin-left: auto;
   margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 @media screen and (min-width: 480px) {
   .container {
@@ -203,6 +205,7 @@ body {
   display: flex;
   align-items: center;
   gap: 10px;
+  text-decoration: none;
   color: var(--titel-text-color);
 }
 .header__contact-link:hover, .header__contact-link:focus {
@@ -213,6 +216,11 @@ body {
   .header__contact-link {
     font-size: 12px;
     line-height: 1.16;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .header__contact-link {
+    font-size: 14px;
   }
 }
 
@@ -397,7 +405,7 @@ body {
 
 .hero {
   display: block;
-  max-width: 1600px;
+  max-width: 1200px;
   height: 600px;
   align-items: center;
   justify-content: center;
@@ -406,28 +414,34 @@ body {
   margin-top: 60px;
   box-sizing: border-box;
   margin: 0 auto;
-  margin-bottom: 60px;
-  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../../images/image-bg.jpg);
-  background-repeat: no-repeat;
-  height: 400px;
-}
-@media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
-  .hero {
-    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/Header-mob-2x.jpg);
-  }
 }
 @media screen and (min-width: 480px) {
+  .hero {
+    padding-top: 118px;
+    padding-bottom: 118px;
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/Header-mob-1x.jpg);
+    background-repeat: no-repeat;
+    height: 400px;
+  }
+}
+@media screen and (min-width: 480px) and (min-device-pixel-ratio: 2), screen and (min-width: 480px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 480px) and (min-resolution: 192dpi), screen and (min-width: 480px) and (min-resolution: 2dppx) {
+  .hero {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/Header-mob-2x.jpg);
+    background-size: cover;
+  }
+}
+@media screen and (min-width: 768px) {
   .hero {
     height: 400px;
     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/Header-tablet.jpg);
   }
 }
-@media screen and (min-width: 480px) and (min-device-pixel-ratio: 2), screen and (min-width: 480px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 480px) and (min-resolution: 192dpi), screen and (min-width: 480px) and (min-resolution: 2dppx) {
+@media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
   .hero {
     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/Header-tablet-2x.jpg);
   }
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1200px) {
   .hero {
     height: 600px;
     padding-top: 200px;
@@ -435,14 +449,13 @@ body {
     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/image-bg.jpg);
   }
 }
-@media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
+@media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
   .hero {
     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/Header-desktop-2x.jpg);
   }
 }
 
 .hero__title {
-  padding-top: 118px;
   margin: 0 auto;
   margin-bottom: 30px;
   font-weight: 900;
@@ -455,9 +468,9 @@ body {
 }
 @media screen and (min-width: 768px) {
   .hero__title {
+    font-size: 26px;
+    line-height: 1.62;
     padding: 0;
-    font-size: 44px;
-    line-height: 1.36;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -487,6 +500,22 @@ body {
   cursor: pointer;
   border-radius: 4px;
   border: none;
+}
+
+.characteristic {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+@media screen and (min-width: 768px) {
+  .characteristic {
+    padding-top: 60px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .characteristic {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }
 
 .characteristic__visually-hidden {
@@ -548,9 +577,13 @@ body {
   color: var(--first-title-color);
   letter-spacing: 0.03em;
 }
+@media screen and (min-width: 1200px) {
+  .characteristics__card-titel {
+    text-align: start;
+  }
+}
 
 .characteristics__card-text {
-  margin-bottom: 30px;
   padding-left: 7px;
   padding-right: 23px;
   font-size: 14px;
@@ -559,9 +592,15 @@ body {
   letter-spacing: 0.03em;
   color: #757575;
 }
+@media screen and (min-width: 768px) {
+  .characteristics__card-text {
+    margin-bottom: 30px;
+  }
+}
 @media screen and (min-width: 1200px) {
   .characteristics__card-text {
     margin-bottom: 0px;
+    padding-left: 0%;
   }
 }
 
@@ -587,26 +626,24 @@ body {
 }
 
 .logo-footer {
-  padding-left: 163px;
-  padding-right: 163px;
-  padding-top: 60px;
+  display: flex;
+  justify-content: center;
   font-family: "Raleway";
   font-weight: 700;
   font-size: 26px;
   line-height: 1.1923;
   color: var(--first-color);
   text-decoration: none;
-  width: 145px;
   height: 31px;
 }
 @media screen and (min-width: 768px) {
   .logo-footer {
-    padding-left: 115px;
-    padding-top: 60px;
+    margin-bottom: 20px;
   }
 }
 @media screen and (min-width: 1200px) {
   .logo-footer {
+    display: block;
     text-align: left;
     padding: 0;
   }
@@ -619,7 +656,6 @@ body {
 
 .work__titel {
   margin-bottom: 50px;
-  padding-top: 94px;
 }
 
 .work__list {
@@ -654,7 +690,6 @@ body {
 
 .work {
   display: flex;
-  padding-bottom: 94px;
   flex-wrap: wrap;
   gap: 10px;
   background-color: var(--first-color);
@@ -663,17 +698,43 @@ body {
 @media screen and (min-width: 1200px) {
   .work {
     display: flex;
+    padding-bottom: 94px;
   }
 }
 
 .team {
-  background-color: #F5F4FA;
+  padding-top: 60px;
   padding-bottom: 60px;
+  background-color: #F5F4FA;
+}
+@media screen and (min-width: 1200px) {
+  .team {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }
 
 .team__title {
-  margin-top: 60px;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 1.17;
+  text-align: center;
+  color: var(--first-title-color);
   margin-bottom: 30px;
+}
+@media screen and (min-width: 768px) {
+  .team__title {
+    font-size: 28px;
+    line-height: 1.17;
+    letter-spacing: 0.03em;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .team__title {
+    margin-bottom: 50px;
+    font-size: 36px;
+    line-height: 1.16;
+  }
 }
 
 .team__list {
@@ -763,9 +824,41 @@ body {
   fill: var(--first-color);
 }
 
+.client {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+@media screen and (min-width: 768px) {
+  .client {
+    padding-top: 60px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .client {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+}
+
 .client__titel {
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 1.17;
+  text-align: center;
+  color: var(--first-title-color);
   margin-bottom: 50px;
-  padding-top: 94px;
+}
+@media screen and (min-width: 768px) {
+  .client__titel {
+    font-size: 28px;
+    line-height: 1.17;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .client__titel {
+    font-size: 36px;
+    line-height: 1.16;
+  }
 }
 
 .client__list {
@@ -774,7 +867,6 @@ body {
   justify-content: center;
   gap: 30px;
   padding-left: 0px;
-  padding-bottom: 94px;
 }
 
 .client__link {
@@ -848,6 +940,16 @@ li > .client__link:hover, li > .client__link:focus {
   }
 }
 
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .footer__list {
+    position: absolute;
+    display: flex;
+    left: 76px;
+    width: 235px;
+    justify-content: center;
+  }
+}
+
 .footer-blok {
   position: relative;
   align-items: center;
@@ -877,7 +979,7 @@ li > .client__link:hover, li > .client__link:focus {
 @media screen and (min-width: 768px) {
   .address {
     position: absolute;
-    left: 76px;
+    top: 20px;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -885,13 +987,15 @@ li > .client__link:hover, li > .client__link:focus {
     position: relative;
     margin-top: 28px;
     text-align: left;
+    width: 231px;
     left: 0;
+    top: 0;
   }
 }
 
 .footer-contact {
   display: block;
-  margin-top: 9px;
+  margin-top: 8px;
   font-size: 14px;
   line-height: 1.7142;
   color: rgba(255, 255, 255, 0.6);
@@ -906,7 +1010,7 @@ li > .client__link:hover, li > .client__link:focus {
 .online {
   margin-left: auto;
   margin-right: auto;
-  padding-top: 60px;
+  margin-top: 60px;
   margin-bottom: 20px;
 }
 @media screen and (min-width: 768px) {
@@ -920,8 +1024,8 @@ li > .client__link:hover, li > .client__link:focus {
 @media screen and (min-width: 1200px) {
   .online {
     position: relative;
-    margin-left: 94px;
-    margin-right: 94px;
+    margin-left: 70px;
+    margin-right: 93px;
     right: 0;
     margin-bottom: 0;
   }
@@ -942,6 +1046,11 @@ li > .client__link:hover, li > .client__link:focus {
 @media screen and (min-width: 768px) {
   .online-titel {
     margin-top: 0px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .online-titel {
+    justify-content: left;
   }
 }
 
@@ -986,6 +1095,7 @@ li > .client__link:hover, li > .client__link:focus {
 }
 @media screen and (min-width: 768px) {
   .footer-telegram {
+    min-width: 450px;
     margin-top: 0;
     position: absolute;
     top: 180px;
@@ -1008,7 +1118,7 @@ li > .client__link:hover, li > .client__link:focus {
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
   height: 50px;
-  width: 450px;
+  width: 100%;
   background-color: transparent;
   align-items: center;
   letter-spacing: 0.03em;

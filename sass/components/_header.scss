@@ -126,20 +126,26 @@ align-items: center;
     display: flex;
     align-items: center;
     gap: 10px;
+    text-decoration: none;
     color: var(--titel-text-color);
     &:hover,
     &:focus {
     color: var(--logo-item-color);
     transition: color var(--transition-cubic);
+    
         }
         @include tablet{
         font-size: 12px;
         line-height: 1.16;
         }
+        @include desktop{
+        font-size: 14px;
+        }
        
 
 }
 .header__contact-email{
+    // text-decoration: none;
     margin-bottom: 10px;
     padding-top: 21px;
     @include desktop {
@@ -148,6 +154,7 @@ align-items: center;
         }
 }
 .header__contact-telefon{
+    // text-decoration: none;
     padding-bottom: 21px;
     @include desktop {
             padding-bottom: 0;;

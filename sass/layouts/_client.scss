@@ -1,7 +1,33 @@
+.client{
+    padding-top: 60px;
+    padding-bottom: 60px;
+    @include tablet{
+    padding-top: 60px;
+    }
+    @include desktop{
+        padding-top: 94px;
+        padding-bottom: 94px;
+    }
+   
+}
 .client__titel {
-    @extend %title-two;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 1.17;
+    text-align: center;
+    color: var(--first-title-color);
+    
     margin-bottom: 50px;
-    padding-top: 94px;
+
+    @include tablet{
+    font-size: 28px;
+    line-height: 1.17;
+    }
+    @include desktop{
+    font-size: 36px;
+    line-height: 1.16;
+    }
+ 
 }
 
 .client__list{
@@ -10,7 +36,6 @@
     justify-content: center;
     gap: 30px;
     padding-left: 0px;
-    padding-bottom: 94px;
 }
 .client__link{
     display: flex;
