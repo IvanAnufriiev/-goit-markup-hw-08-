@@ -405,7 +405,7 @@ body {
 
 .hero {
   display: block;
-  max-width: 1200px;
+  max-width: 1600px;
   height: 600px;
   align-items: center;
   justify-content: center;
@@ -414,20 +414,16 @@ body {
   margin-top: 60px;
   box-sizing: border-box;
   margin: 0 auto;
+  background-size: cover;
+  padding-top: 118px;
+  padding-bottom: 118px;
+  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/Header-mob-1x.jpg);
+  background-repeat: no-repeat;
+  height: 400px;
 }
-@media screen and (min-width: 480px) {
-  .hero {
-    padding-top: 118px;
-    padding-bottom: 118px;
-    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/Header-mob-1x.jpg);
-    background-repeat: no-repeat;
-    height: 400px;
-  }
-}
-@media screen and (min-width: 480px) and (min-device-pixel-ratio: 2), screen and (min-width: 480px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 480px) and (min-resolution: 192dpi), screen and (min-width: 480px) and (min-resolution: 2dppx) {
+@media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
   .hero {
     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/Header-mob-2x.jpg);
-    background-size: cover;
   }
 }
 @media screen and (min-width: 768px) {
@@ -584,24 +580,11 @@ body {
 }
 
 .characteristics__card-text {
-  padding-left: 7px;
-  padding-right: 23px;
   font-size: 14px;
   line-height: 1.7142;
   font-weight: 400;
   letter-spacing: 0.03em;
   color: #757575;
-}
-@media screen and (min-width: 768px) {
-  .characteristics__card-text {
-    margin-bottom: 30px;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .characteristics__card-text {
-    margin-bottom: 0px;
-    padding-left: 0%;
-  }
 }
 
 .characteristic {
@@ -828,11 +811,6 @@ body {
   padding-top: 60px;
   padding-bottom: 60px;
 }
-@media screen and (min-width: 768px) {
-  .client {
-    padding-top: 60px;
-  }
-}
 @media screen and (min-width: 1200px) {
   .client {
     padding-top: 94px;
@@ -852,6 +830,7 @@ body {
   .client__titel {
     font-size: 28px;
     line-height: 1.17;
+    margin-bottom: 30px;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -1028,6 +1007,7 @@ li > .client__link:hover, li > .client__link:focus {
     margin-right: 93px;
     right: 0;
     margin-bottom: 0;
+    margin-top: 0;
   }
 }
 
@@ -1112,8 +1092,6 @@ li > .client__link:hover, li > .client__link:focus {
 }
 
 .footer-input {
-  margin-left: 15px;
-  margin-right: 15px;
   border: 1px solid rgba(255, 255, 255, 0.3);
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;

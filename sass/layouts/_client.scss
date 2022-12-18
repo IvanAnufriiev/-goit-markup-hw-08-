@@ -1,9 +1,8 @@
 .client{
     padding-top: 60px;
     padding-bottom: 60px;
-    @include tablet{
-    padding-top: 60px;
-    }
+    
+
     @include desktop{
         padding-top: 94px;
         padding-bottom: 94px;
@@ -18,10 +17,10 @@
     color: var(--first-title-color);
     
     margin-bottom: 50px;
-
     @include tablet{
     font-size: 28px;
     line-height: 1.17;
+    margin-bottom: 30px;
     }
     @include desktop{
     font-size: 36px;

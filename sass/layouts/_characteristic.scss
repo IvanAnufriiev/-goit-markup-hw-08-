@@ -77,21 +77,14 @@
 }
 .characteristics__card-text {
     
-    padding-left: 7px;
-    padding-right: 23px;
+    
     font-size: 14px;
     line-height: 1.7142;
     font-weight: 400;
     letter-spacing: 0.03em;
-    @include tablet{
-margin-bottom: 30px;
-    }
     
         color: #757575;
-        @include desktop{
-            margin-bottom: 0px;
-            padding-left: 0%;
-        }
+        
 }
 
 .characteristic {
